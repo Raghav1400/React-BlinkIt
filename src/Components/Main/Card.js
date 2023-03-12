@@ -5,6 +5,7 @@ import CardImage from './Card/CardImage'
 import SourceTime from './Card/SourceTime'
 import ItemName from './Card/ItemName'
 import ItemWeight from './Card/ItemWeight'
+import ItemPrice from './Card/ItemPrice'
 
 class Card extends Component {
     constructor(props) {
@@ -23,7 +24,7 @@ class Card extends Component {
         <SourceTime time={this.props.info.source_time}/>
         <ItemName name={this.props.info.name}/>
         <ItemWeight weight={this.props.info.weight} />
-        {/*<ItemPrice /> */}
+        <ItemPrice info={this.props.info} clickAdd={this.props.clickAdd} clickPlus={this.props.clickPlus} clickMinus={this.props.clickMinus}/>
       </div>
     )
   }

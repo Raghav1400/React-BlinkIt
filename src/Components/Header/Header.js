@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 
-// import '../../css/style.css'
 
 import Logo from './Logo'
 import Location from './Location'
@@ -10,10 +9,6 @@ import LoginButton from './LoginButton'
 class Header extends Component {
     constructor(props) {
       super(props)
-    
-      this.state = {
-         
-      }
     }
     
   render() {
@@ -25,7 +20,7 @@ class Header extends Component {
         </div>
         <div>
             <LoginButton id="header-login"/>
-            <CartButton href="/" id="header-mycart"/>   
+            <CartButton href="/" id="header-mycart" cartInfo={this.props.cartInfo}/>   
         </div>  
       </div>
     )

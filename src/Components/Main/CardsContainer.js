@@ -8,8 +8,8 @@ class CardsContainer extends Component {
     
   render() {
     var elements=this.props.cards.map(
-        function(element){
-            return <Card info={element}/>;
+        (element)=>{
+            return <Card info={element} clickAdd={this.props.clickAdd} clickPlus={this.props.clickPlus} clickMinus={this.props.clickMinus}/>;
         }
       )
     

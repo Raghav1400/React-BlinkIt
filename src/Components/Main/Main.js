@@ -14,7 +14,7 @@ class Main extends Component {
        category:'default',
        subcategory:'default',
        subcategoryData:subcategories,
-       cardsData:cards
+       cardsData:this.props.cards
     }
 
     this.handleCategoryChange =this.handleCategoryChange.bind(this);
@@ -62,7 +62,7 @@ class Main extends Component {
         <MainCategory id='second-header' onCategoryChange={this.handleCategoryChange}/>
         <main>
           <Subcategories category={this.state.subcategoryData} onSubCategoryChange={this.handleSubCategoryChange}/>
-          <Section cards={this.state.cardsData}/>
+          <Section cards={this.state.cardsData} clickAdd={this.props.clickAdd} clickPlus={this.props.clickPlus} clickMinus={this.props.clickMinus}/>
         </main>
       </div>
       
