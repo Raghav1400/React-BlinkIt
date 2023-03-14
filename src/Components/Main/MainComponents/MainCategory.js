@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import mainCategories from '../../data/categories.json' 
+import mainCategories from '../../../data/categories.json' 
 import CategoryChild from './CategoryChild'
 
 class MainCategory extends Component {

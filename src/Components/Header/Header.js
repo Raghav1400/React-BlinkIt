@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
 
 
-import Logo from './Logo'
-import Location from './Location'
-import CartButton from './CartButton'
-import LoginButton from './LoginButton'
+import Logo from './HeaderComponents/Logo'
+import Location from './HeaderComponents/Location'
+import CartButton from './HeaderComponents/CartButton'
+import LoginButton from './HeaderComponents/LoginButton'
 
 class Header extends Component {
     constructor(props) {

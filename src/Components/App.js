@@ -1,10 +1,9 @@
 import React, { Component } from 'react'
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import Header from './Header/Header';
-
-import Main from './Main/Main';
-import Footer from './Footer/Footer'
 import cards from '../data/cards.json' 
+import Checkout from './Checkout/Checkout';
+import Home from './Home';
 
 class App extends Component {
     constructor(props) {
@@ -69,11 +68,12 @@ class App extends Component {
   }
   render() {
     return (
-      <div>
-        <Header id='header' cartInfo={this.state}/>
-        <Main cards={this.state.cards} clickAdd={this.handleClickAdd} clickPlus={this.handleClickPlus} clickMinus={this.handleClickMinus}/>
-        <Footer />
-      </div>
+        <>
+          <Routes>
+            <Route path='/' element={<Home cartInfo={this.state} clickAdd={this.handleClickAdd} clickPlus={this.handleClickPlus} clickMinus={this.handleClickMinus}/>}/>
+            <Route path='/checkout' element={<Checkout cartInfo={this.state} clickAdd={this.handleClickAdd} clickPlus={this.handleClickPlus} clickMinus={this.handleClickMinus}/>}/>
+          </Routes>
+        </>
     )
   }
 }

@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 
-import MainCategory from './MainCategory';
-import Subcategories from './Subcategories'
-import Section from './Section'
+import MainCategory from './MainComponents/MainCategory';
+import Subcategories from './MainComponents/Subcategories'
+import Section from './MainComponents/Section'
 import subcategories from '../../data/subcategories.json' 
 import cards from '../../data/cards.json' 
 

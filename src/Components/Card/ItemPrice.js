@@ -1,13 +1,6 @@
 import React, { Component } from 'react'
 
 export class ItemPrice extends Component {
-   constructor(props) {
-     super(props)
-   
-     this.state = {
-        
-     }
-   }
   render() {
     var priceElement;
     if(this.props.info.count===0){

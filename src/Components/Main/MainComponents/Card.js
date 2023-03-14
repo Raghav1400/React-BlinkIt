@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
 
-import CardDiscountButton from './Card/CardDiscountButton'
-import CardImage from './Card/CardImage'
-import SourceTime from './Card/SourceTime'
-import ItemName from './Card/ItemName'
-import ItemWeight from './Card/ItemWeight'
-import ItemPrice from './Card/ItemPrice'
+import CardDiscountButton from '../../Card/CardDiscountButton'
+import CardImage from '../../Card/CardImage'
+import SourceTime from '../../Card/SourceTime'
+import ItemName from '../../Card/ItemName'
+import ItemWeight from '../../Card/ItemWeight'
+import ItemPrice from '../../Card/ItemPrice'
 
 class Card extends Component {
     constructor(props) {

@@ -18,6 +18,7 @@ a:hover {
 a:active {
     text-decoration: none;
 }
+
 /********************************************************/
 #header{
     display: flex;
@@ -254,6 +255,7 @@ main section{
 .new-price{
     height: 20px;
 }
+
 .old-price{
     height: 5px;
     text-decoration: line-through;
@@ -262,7 +264,7 @@ main section{
 }
 /********************************************************/
 footer{
-    margin-top: 100px;
+    margin-top: 10rem;
 }
 #perks{
     display: flex;
@@ -341,3 +343,38 @@ footer{
     padding: 5px;
 }
 
+/*************************************/
+#bill-container{
+    width:600px;
+    min-height: 500px;
+    margin: auto
+}
+#bill-container div{
+    margin:2px;
+    align-items: center;
+}
+#item-container{
+    min-height: 200px;
+}
+.item{
+    display: flex;
+    flex-wrap: wrap;
+}
+.item-image{
+    max-width: 20%;
+}
+.item-info{
+    flex-grow: 3;
+}
+.item-detail{
+    display: flex;
+    min-height: 30px;
+    justify-content: space-between;
+    
+}
+.proceed{
+    border-radius: 2px;
+    padding: 3px;
+    background-color: rgb(12, 139, 23);
+    color: white;
+}
