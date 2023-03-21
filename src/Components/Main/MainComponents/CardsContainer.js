@@ -1,15 +1,23 @@
 import React, { Component } from 'react'
+import {connect} from 'react-redux'
 
 import Card from './Card'
 class CardsContainer extends Component {
-    constructor(props) {
-      super(props)
-    }
-    
   render() {
-    var elements=this.props.cards.map(
+    var category=this.props.category;
+    var subcategory=this.props.subcategory;
+    
+    var elements=this.props.cards
+      .filter(
         (element)=>{
-            return <Card info={element} clickAdd={this.props.clickAdd} clickPlus={this.props.clickPlus} clickMinus={this.props.clickMinus}/>;
+          var elementCategory=element.category;
+          var elementSubcategory=element.subcategory;
+          return (category=='default'&&subcategory=='default')||(category=='default'&&subcategory==elementSubcategory)||(category==elementCategory&&subcategory=='default')||(category==elementCategory&&subcategory==elementSubcategory);
+        }
+      )
+      .map(
+        (element)=>{
+            return <Card key={element.id} info={element}/>;
         }
       )
     
@@ -21,4 +29,13 @@ class CardsContainer extends Component {
   }
 }
 
-export default CardsContainer
+const mapStateToProps =(state,props)=> {
+  return {
+    ...props,
+    cards:state.card.cards
+  }
+}
+const mapDispatchToProps=(dispatch)=>{
+  return {};
+}
+export default connect(mapStateToProps,mapDispatchToProps)(CardsContainer)

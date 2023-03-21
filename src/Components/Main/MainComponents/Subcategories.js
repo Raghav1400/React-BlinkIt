@@ -1,17 +1,18 @@
 import React, { Component } from 'react'
 import SubcategoryChild from './SubcategoryChild'
+import {connect} from 'react-redux'
 
 class Subcategories extends Component {
-    constructor(props) {
-      super(props)
-    }
-    
   render() {
-    const category=this.props.category;
-
-    var elements=category.map(
+    var elements=this.props.subcategories
+      .filter(
         (element)=>{
-            return <SubcategoryChild info={element} onSubCategoryChange={this.props.onSubCategoryChange} />
+          return (element['category'] ==this.props.category)||(this.props.category=='default');
+        }
+      )
+      .map(
+        (element)=>{
+            return <SubcategoryChild key={element.id} info={element} onSubCategoryChange={this.props.onSubCategoryChange} />
         }
       )
 
@@ -23,4 +24,13 @@ class Subcategories extends Component {
   }
 }
 
-export default Subcategories
+const mapStateToProps =(state,props)=> {
+  return {
+    ...props,
+    subcategories:state.subcategory.subcategories
+  }
+}
+const mapDispatchToProps=(dispatch)=>{
+  return {};
+}
+export default connect(mapStateToProps,mapDispatchToProps)(Subcategories)

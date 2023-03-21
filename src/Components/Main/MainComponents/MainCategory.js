@@ -1,19 +1,12 @@
 import React, { Component } from 'react'
-import mainCategories from '../../../data/categories.json' 
 import CategoryChild from './CategoryChild'
+import {connect} from 'react-redux'
 
 class MainCategory extends Component {
-    constructor(props) {
-      super(props)
-      this.state = {
-         categories:mainCategories,
-      }
-    }
-    
   render() {
-    var elements=this.state.categories.map(
+    var elements=this.props.categories.map(
             function(element){
-                return <CategoryChild info={element}/>
+                return <CategoryChild key={element} info={element}/>
             }
         );
 
@@ -25,4 +18,13 @@ class MainCategory extends Component {
   }
 }
 
-export default MainCategory
+const mapStateToProps =(state,props)=> {
+  return {
+    ...props,
+    categories:state.maincategory.categories
+  }
+}
+const mapDispatchToProps=(dispatch)=>{
+  return {};
+}
+export default connect(mapStateToProps,mapDispatchToProps)(MainCategory)

@@ -12,9 +12,7 @@ class Main extends Component {
   
     this.state = {
        category:'default',
-       subcategory:'default',
-       subcategoryData:subcategories,
-       cardsData:this.props.cards
+       subcategory:'default'
     }
 
     this.handleCategoryChange =this.handleCategoryChange.bind(this);
@@ -23,46 +21,24 @@ class Main extends Component {
   
   handleCategoryChange(element){
     this.setState({
+      ...this.state,
       category:element.getAttribute("category")
-    },()=>{
-        var newsubcategory=subcategories.filter(
-          (element)=>{
-            return element.category===this.state.category;
-          }
-        )
-        var newcards=cards.filter(
-          (element)=>{
-            return element.category===this.state.category;
-          }
-        )
-        this.setState({
-          subcategoryData:newsubcategory,
-          cardsData:newcards
-        })
     })
   }
   handleSubCategoryChange(newsubcategory){
     this.setState({
+      ...this.state,
       subcategory:newsubcategory
-    },()=>{
-        var newcards=cards.filter(
-          (element)=>{
-            return element.subcategory===this.state.subcategory;
-          }
-        )
-        this.setState({
-          cardsData:newcards
-        })
     })
   }
-
+  
   render() {
     return (
       <div>
         <MainCategory id='second-header' onCategoryChange={this.handleCategoryChange}/>
         <main>
-          <Subcategories category={this.state.subcategoryData} onSubCategoryChange={this.handleSubCategoryChange}/>
-          <Section cards={this.state.cardsData} clickAdd={this.props.clickAdd} clickPlus={this.props.clickPlus} clickMinus={this.props.clickMinus}/>
+          <Subcategories category={this.state.category} onSubCategoryChange={this.handleSubCategoryChange}/>
+          <Section category={this.state.category} subcategory={this.state.subcategory}/>
         </main>
       </div>
       

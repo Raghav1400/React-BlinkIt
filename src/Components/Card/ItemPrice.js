@@ -1,11 +1,13 @@
 import React, { Component } from 'react'
+import { addItem,increaseCount, decreaseCount } from '../../redux/cards';
+import {connect} from 'react-redux'
 
 export class ItemPrice extends Component {
   render() {
     var priceElement;
     if(this.props.info.count===0){
         priceElement=(
-            <button onClick={()=>this.props.clickAdd(this.props.info.id)}>
+            <button onClick={()=>this.props.addItem(this.props.info.id)}>
                 ADD
             </button> 
         )
@@ -41,5 +43,16 @@ export class ItemPrice extends Component {
     )
   }
 }
-
-export default ItemPrice
+const mapStateToProps =(state,props)=> {
+    return {
+        ...props
+    }
+}
+const mapDispatchToProps=(dispatch)=>{
+    return{
+        addItem:(id)=>{dispatch(addItem(id))},
+        clickPlus:(id)=>{dispatch(increaseCount(id))},
+        clickMinus:(id)=>{dispatch(decreaseCount(id))},
+    }
+}
+export default connect(mapStateToProps,mapDispatchToProps)(ItemPrice)

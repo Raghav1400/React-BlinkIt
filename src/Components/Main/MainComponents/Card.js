@@ -8,14 +8,6 @@ import ItemWeight from '../../Card/ItemWeight'
 import ItemPrice from '../../Card/ItemPrice'
 
 class Card extends Component {
-    constructor(props) {
-      super(props)
-    
-      this.state = {
-         
-      }
-    }
-    
   render() {
     return (
       <div className='section-bottom-item'>
@@ -24,7 +16,7 @@ class Card extends Component {
         <SourceTime time={this.props.info.source_time}/>
         <ItemName name={this.props.info.name}/>
         <ItemWeight weight={this.props.info.weight} />
-        <ItemPrice info={this.props.info} clickAdd={this.props.clickAdd} clickPlus={this.props.clickPlus} clickMinus={this.props.clickMinus}/>
+        <ItemPrice info={this.props.info}/>
       </div>
     )
   }

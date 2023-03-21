@@ -8,7 +8,7 @@ class Section extends Component {
     return (
       <section>
         <GeneralInfo id="section-top"/>
-        <CardsContainer id="section-bottom" cards={this.props.cards} clickAdd={this.props.clickAdd} clickPlus={this.props.clickPlus} clickMinus={this.props.clickMinus}/>
+        <CardsContainer id="section-bottom" category={this.props.category} subcategory={this.props.subcategory}/>
       </section>
     )
   }

@@ -8,8 +8,8 @@ export class Home extends Component {
     return (
     <>
       <Header id='header' cartInfo={this.props.cartInfo}/>
-      <Main cards={this.props.cartInfo.cards} clickAdd={this.props.clickAdd} clickPlus={this.props.clickPlus} clickMinus={this.props.clickMinus}/>
-      <Footer />
+      <Main clickPlus={this.props.clickPlus} clickMinus={this.props.clickMinus}/>
+      {/* <Footer /> */}
     </>
     )
   }
