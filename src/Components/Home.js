@@ -7,9 +7,9 @@ export class Home extends Component {
   render() {
     return (
     <>
-      <Header id='header' cartInfo={this.props.cartInfo}/>
-      <Main clickPlus={this.props.clickPlus} clickMinus={this.props.clickMinus}/>
-      {/* <Footer /> */}
+      <Header id='header'/>
+      <Main/>
+      <Footer />
     </>
     )
   }

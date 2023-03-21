@@ -1,15 +1,21 @@
 import React, { Component } from 'react'
 import logo from '../../../assects/icons8-shopping-cart-50.png'
 import { Link } from "react-router-dom";
+import {connect} from 'react-redux'
 
 class CartButton extends Component {
-    constructor(props) {
-      super(props)
-    }
     
   render() {
+    var cartCount=0;
+    var cartPrice=0;
+    this.props.card.forEach(element => {
+      if(element.count>0){
+        cartCount+=Number(element.count);
+        cartPrice+=Number(element.count)*Number(element.newPrice);
+      }
+    });
     var cartElement;
-    if(this.props.cartInfo.cartCount==0){
+    if(cartCount==0){
       cartElement=(
         <div id="header-cart-button">My Cart</div>
       )
@@ -18,8 +24,8 @@ class CartButton extends Component {
       cartElement=(
          
           <div id="cart-info">
-            <div>{this.props.cartInfo.cartCount} Items</div>
-            <div>₹ {this.props.cartInfo.cartPrice}</div>
+            <div>{cartCount} Items</div>
+            <div>₹ {cartPrice}</div>
           </div>
         
       )
@@ -33,4 +39,15 @@ class CartButton extends Component {
   }
 }
 
-export default CartButton
+const mapStateToProps =(state,props)=> {
+  return {
+      ...props,
+      card:state.card.cards
+  }
+}
+const mapDispatchToProps=(dispatch)=>{
+  return{
+  
+  }
+}
+export default connect(mapStateToProps,mapDispatchToProps)(CartButton)

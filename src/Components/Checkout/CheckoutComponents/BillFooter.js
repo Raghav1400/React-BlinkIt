@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
+import {connect} from 'react-redux'
 
 export class BillFooter extends Component {
   render() {
-    const cart=this.props.cartInfo.cards;
+    const cart=this.props.card;
     var grandTotal=0;
     var originaltotal=0;
     var discount=0;
@@ -48,4 +49,15 @@ export class BillFooter extends Component {
   }
 }
 
-export default BillFooter
+const mapStateToProps =(state,props)=> {
+    return {
+        ...props,
+        card:state.card.cards
+    }
+  }
+const mapDispatchToProps=(dispatch)=>{
+    return{
+    
+    }
+  }
+export default connect(mapStateToProps,mapDispatchToProps)(BillFooter)

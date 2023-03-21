@@ -3,8 +3,6 @@ import React, { Component } from 'react'
 import MainCategory from './MainComponents/MainCategory';
 import Subcategories from './MainComponents/Subcategories'
 import Section from './MainComponents/Section'
-import subcategories from '../../data/subcategories.json' 
-import cards from '../../data/cards.json' 
 
 class Main extends Component {
   constructor(props) {
@@ -21,8 +19,8 @@ class Main extends Component {
   
   handleCategoryChange(element){
     this.setState({
-      ...this.state,
-      category:element.getAttribute("category")
+      category:element.getAttribute("category"),
+      subcategory:'default'
     })
   }
   handleSubCategoryChange(newsubcategory){

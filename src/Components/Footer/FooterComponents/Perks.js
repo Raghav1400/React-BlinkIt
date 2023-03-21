@@ -6,7 +6,7 @@ import PerkChild from './PerkChild'
 function Perks() {
     var elements = perks.map(
         function(element){
-            return <PerkChild info={element}/>
+            return <PerkChild key={element.id} info={element}/>
         }
     )
   return (

@@ -7,10 +7,6 @@ import CartButton from './HeaderComponents/CartButton'
 import LoginButton from './HeaderComponents/LoginButton'
 
 class Header extends Component {
-    constructor(props) {
-      super(props)
-    }
-    
   render() {
     return (
       <div id={this.props.id}>
@@ -20,7 +16,7 @@ class Header extends Component {
         </div>
         <div>
             <LoginButton id="header-login"/>
-            <CartButton href="/" id="header-mycart" cartInfo={this.props.cartInfo}/>   
+            <CartButton href="/" id="header-mycart"/>   
         </div>  
       </div>
     )

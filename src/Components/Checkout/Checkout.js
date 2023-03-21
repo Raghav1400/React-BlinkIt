@@ -12,11 +12,11 @@ export class Checkout extends Component {
       render() {
         return (
           <div>
-            <Header id='header' cartInfo={this.props.cartInfo}/>
+            <Header id='header'/>
             <div id="bill-container">
-              <BillHeader cartInfo={this.props.cartInfo}/>
-              <PurchaseItems cartInfo={this.props.cartInfo} clickAdd={this.props.clickAdd} clickPlus={this.props.clickPlus} clickMinus={this.props.clickMinus}/>
-              <BillFooter cartInfo={this.props.cartInfo}/>
+              <BillHeader />
+              <PurchaseItems/>
+              <BillFooter />
             </div>
             
             <Footer />

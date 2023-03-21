@@ -10,7 +10,7 @@ export class CartItem extends Component {
             <div className="item-info">
                 <div className="item-name">{this.props.item.name}</div>
                 <div className="item-weight">{this.props.item.weight}</div>
-                <ItemPrice info={this.props.item} clickAdd={this.props.clickAdd} clickPlus={this.props.clickPlus} clickMinus={this.props.clickMinus}/>
+                <ItemPrice info={this.props.item}/>
             </div>
         </div> 
     )
