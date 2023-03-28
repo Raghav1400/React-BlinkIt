@@ -72,9 +72,9 @@ a:active {
     padding: 10px;
 }
 #header-login {
+    all: unset;
     margin: auto 30px;
     font-weight: 100;
-    
 }
 #cart-info {
     background-color: #459220;

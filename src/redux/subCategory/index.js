@@ -1,5 +1,4 @@
 import subcategories from '../../data/subcategories.json'
-import {createStore} from 'redux'
 
 const FETCH_SUBCATEGORIES='FETCH_SUBCATEGORIES';
 

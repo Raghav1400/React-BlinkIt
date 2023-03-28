@@ -1,8 +1,6 @@
 import React, { Component } from 'react'
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-
-import Checkout from './Checkout/Checkout';
-import Home from './Home';
+import {Routes, Route } from "react-router-dom";
+import {Checkout,Home} from './pages';
 
 class App extends Component {
   render() {

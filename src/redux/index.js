@@ -1,13 +1,15 @@
 import {combineReducers} from 'redux'
 import cardReducer from './cards/cardReducer'
-import maincategoryReducer from './mainCategory/index'
-import subcategoryReducer from './subCategory/index'
+import maincategoryReducer from './mainCategory'
+import subcategoryReducer from './subCategory'
+import perksReducer from './perks'
 import {createStore} from 'redux'
 
-export const rootReducer=combineReducers({
+const rootReducer=combineReducers({
     card:cardReducer,
     maincategory:maincategoryReducer,
-    subcategory:subcategoryReducer
+    subcategory:subcategoryReducer,
+    perks:perksReducer
 })
 
 const store=createStore(rootReducer);
