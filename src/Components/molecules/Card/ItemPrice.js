@@ -17,7 +17,7 @@ const ItemPrice =(props)=>{
                 </div>
             </div>
                 {count===0 && (<button onClick={()=>addItem(id)}>ADD</button>)}
-                {count!=0 && (<ItemPriceWithCount elementId={id} clickMinus={clickMinus} clickPlus={clickPlus} count={count}/>)}
+                {count!==0 && (<ItemPriceWithCount elementId={id} clickMinus={clickMinus} clickPlus={clickPlus} count={count}/>)}
         </div>
     )
 }

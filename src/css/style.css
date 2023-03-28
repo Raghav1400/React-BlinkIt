@@ -44,7 +44,8 @@ a:active {
     
 }
 #location{
-    border: none;
+    display: block;
+    margin-top: 2px;
 }
 
 #header-mycart{

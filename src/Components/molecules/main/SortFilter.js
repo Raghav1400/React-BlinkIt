@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
 
 export class SortFilter extends Component {
-    constructor(props) {
-      super(props)
-      // logic of filter to be added
-    }
+    // constructor(props) {
+    //   super(props)
+    //   // logic of filter to be added
+    // }
     
   render() {
     return (

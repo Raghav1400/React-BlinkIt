@@ -6,11 +6,12 @@ const initialCardState ={
 }
 
 const cardReducer=(state=initialCardState,action)=>{
+    let newState=null;
     switch(action.type){
         case ADD_ITEM:
-            var newState=state.cards.map(
+            newState=state.cards.map(
                 (element)=>{
-                    if(element.id==action.id){
+                    if(element.id===action.id){
                         return {
                             ...element,
                             count:element.count+1
@@ -25,9 +26,9 @@ const cardReducer=(state=initialCardState,action)=>{
                 cards:newState
             }
         case INCREASE_COUNT:
-            var newState=state.cards.map(
+            newState=state.cards.map(
                 (element)=>{
-                    if(element.id==action.id){
+                    if(element.id===action.id){
                         return {
                             ...element,
                             count:element.count+1
@@ -42,9 +43,9 @@ const cardReducer=(state=initialCardState,action)=>{
                 cards:newState
             }
         case DECREASE_COUNT:
-            var newState=state.cards.map(
+            newState=state.cards.map(
                 (element)=>{
-                    if(element.id==action.id){
+                    if(element.id===action.id){
                         return {
                             ...element,
                             count:element.count-1

@@ -1,6 +1,7 @@
 import React from 'react'
 import {SubcategoryChild} from '../../molecules/main'
 import {connect} from 'react-redux'
+import { checkSelectedCategory } from './helper'
 
 const Subcategories =(props)=>{
     return (
@@ -9,7 +10,7 @@ const Subcategories =(props)=>{
           props.subcategories
           .filter(
             (element)=>{
-              return (element['category'] === props.category)||(props.category ==='default');
+              return checkSelectedCategory(element,props.category);
             }
           )
           .map(

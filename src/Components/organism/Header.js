@@ -7,7 +7,7 @@ function Header(props){
       <div id='header'>
          <div>
             <Logo id="header-blinkit-logo" src="https://blinkit.com/9f644712ea8611916099.png"/>
-            <Location id="header-location-info" />
+            <Location id="header-location-info" locations={props.locations} />
         </div>
         <div>
             <LoginButton id="header-login"/>
@@ -19,7 +19,8 @@ function Header(props){
 
 const mapStateToProps =(state,props)=> {
   return {
-      cards:state.card.cards
+      cards:state.card.cards,
+      locations:state.locations.locations
   }
 }
 export default connect(mapStateToProps,null)(Header)

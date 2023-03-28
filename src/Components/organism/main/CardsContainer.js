@@ -1,18 +1,17 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import {Card} from '../../molecules/main'
+import { checkSelectedCategoryAndSubcategory } from './helper';
 
 const  CardsContainer=(props)=>{
     var {category,subcategory}=props;
     return (
       <div id="section-bottom">
-        {//write inline logic in helper
+        {
           props.cards
           .filter(
             (element)=>{
-              var elementCategory=element.category;
-              var elementSubcategory=element.subcategory;
-              return (category==='default'&&subcategory==='default')||(category==='default'&&subcategory===elementSubcategory)||(category===elementCategory&&subcategory==='default')||(category===elementCategory&&subcategory===elementSubcategory);
+              return checkSelectedCategoryAndSubcategory(element,category,subcategory);
             }
           )
           .map(

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import {Header,Footer} from '../organism/index'
+import {Header,Footer} from '../organism'
 import {BillHeader,BillFooter,PurchaseItems} from '../molecules/bill'
 class Checkout extends Component {
     render() {

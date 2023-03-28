@@ -4,7 +4,7 @@ function Logo(props) {
   const {id,src}=props;
   return (
     <div id={id}>
-        <img src={src}/>
+        <img src={src} alt=''/>
     </div>
   )
 }
