@@ -1,0 +1,9 @@
+.header{
+    display: flex;
+    justify-content: center;
+}
+
+.header div{
+    padding: 10px;
+    color: rgba(18, 18, 17, 0.72);
+}

@@ -1,0 +1,10 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid rgba(179, 178, 178, 0.14);
+}
+.header > div{
+    display: flex;
+    margin: 0 20px;
+    height: 80px;
+}

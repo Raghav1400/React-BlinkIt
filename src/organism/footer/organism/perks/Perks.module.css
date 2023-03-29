@@ -1,0 +1,6 @@
+.perks{
+    display: flex;
+    height: 230px;
+    justify-content: space-around;
+    margin: 0 200px;
+}

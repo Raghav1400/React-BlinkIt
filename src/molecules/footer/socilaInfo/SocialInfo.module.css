@@ -1,0 +1,9 @@
+.social-logo{
+    margin-right: 200px;
+    display: flex;
+    padding: 20px;
+}
+.social-logo img{
+    border-radius: 50%;
+    padding: 5px;
+}

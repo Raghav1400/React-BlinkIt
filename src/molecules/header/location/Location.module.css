@@ -1,0 +1,9 @@
+.location-info{
+    margin: auto 30px;
+    font-weight: bolder;   
+}
+
+.location-option{
+    display: block;
+    margin-top: 2px;
+}

@@ -1,0 +1,28 @@
+.perk{
+    width: 400px;
+    border: 1px solid black;
+    margin: 0 10px;
+    border-radius: 10px;
+}
+.perk-logo{
+    display: flex;
+    height:140px;
+    justify-content: center;
+    padding: 5px;
+}
+.perk-logo img{
+    width: 40%;
+    height: 100%;
+}
+.perk-heading{
+    height:30px;
+    padding-top: 10px;
+    text-align: center;
+    font-weight: 900;
+}
+.perk-data{
+    margin: auto 20px;
+    display: inline-block;
+    height:40px;
+    text-align: center;
+}

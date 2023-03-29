@@ -1,0 +1,6 @@
+.contact-info{
+    background-color: rgb(151, 148, 148);
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+}

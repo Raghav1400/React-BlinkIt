@@ -1,0 +1,35 @@
+.section-bottom-item-price-add{
+    display: flex;
+    margin-bottom: 0;
+    height: 30px;
+    justify-content: space-between;
+}
+
+.add-btn{ 
+    color: #459220;
+    border: 1px solid #459220;
+    background-color: #caeeb9; 
+    width: 100px;
+    font-weight: bold;
+    border-radius: 10%;
+}
+
+
+.add-btn :hover{ 
+    background-color: #459220; 
+    color: white;
+}
+.price{
+    height: 100%;
+}
+
+.new-price{
+    height: 20px;
+}
+
+.old-price{
+    height: 5px;
+    text-decoration: line-through;
+    font-size: 10px;
+    color: rgb(177, 173, 173);
+}

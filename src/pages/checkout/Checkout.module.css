@@ -1,0 +1,9 @@
+.bill-container{
+    width:600px;
+    min-height: 500px;
+    margin: auto
+}
+.bill-container div{
+    margin:2px;
+    align-items: center;
+}

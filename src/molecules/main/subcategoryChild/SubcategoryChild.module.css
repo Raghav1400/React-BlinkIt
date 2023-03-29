@@ -1,0 +1,14 @@
+.aside-img{
+    width: 75px;
+    height: 100%;
+}
+.aside-img img{
+    width: 80%;
+    height: 80%;
+    border-radius: 10px;
+    margin: 6px ;
+}
+.aside-content{
+    width: 175px;
+    margin: auto;
+}
