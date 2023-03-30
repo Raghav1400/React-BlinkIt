@@ -1,6 +1,6 @@
 import React from 'react'
 import {GeneralInfo} from '../../../../molecules/main'
-import {CardsContainer} from './organism'
+import {CardsContainer} from './organism/cardContainer'
 import './Section.module.css'
 
 const Section =(props)=>{

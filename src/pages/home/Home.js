@@ -1,16 +1,16 @@
-import React, { Component } from 'react'
-import {Header,Footer,Main} from '../../organism';
+import React from "react";
+import { Header } from "../../organism/header";
+import { Footer } from "../../organism/footer";
+import { Main } from "../../organism/main";
+import "./home.module.css";
 
-class Home extends Component {
-  render() {
-    return (
-    <>
-      <Header/> 
-      <Main/>
-      <Footer />
-    </>
-    )
-  }
-}
-
-export default Home
+const Home = () => {
+	return (
+		<>
+			<Header />
+			<Main />
+			<Footer />
+		</>
+	);
+};
+export default Home;

@@ -1,0 +1,1 @@
+export const BRAND_LOGO = "https://blinkit.com/9f644712ea8611916099.png";

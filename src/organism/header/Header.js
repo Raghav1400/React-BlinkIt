@@ -1,28 +1,33 @@
-import React from 'react'
-import {connect} from 'react-redux'
-import {CartButton,Logo,Location,LoginButton} from '../../molecules/header'
-import Styles from './Header.module.css'
+import React from "react";
+import { connect } from "react-redux";
+import { LoginButton } from "./molucules/loginButton";
+import { CartButton } from "./molucules/cartButton";
+import { Location } from "./molucules/location";
+import { Logo } from "./molucules/logo";
+import styles from "./header.module.css";
+import { selectAllCards } from "../../pages/redux/cardRedux/cardReducer";
+import { selectLocations } from "../../pages/redux/locationinfo";
+import { BRAND_LOGO } from "./constant";
 
-
-function Header(props){
-    return (
-      <div className={Styles.header}>
-         <div>
-            <Logo src="https://blinkit.com/9f644712ea8611916099.png"/>
-            <Location locations={props.locations} />
-        </div>
-        <div>
-            <LoginButton />
-            <CartButton cards={props.cards}/>   
-        </div>  
-      </div>
-    )
+function Header(props) {
+	return (
+		<div className={styles.header}>
+			<div>
+				<Logo src={BRAND_LOGO} />
+				<Location locations={props.locations} />
+			</div>
+			<div>
+				<LoginButton />
+				<CartButton cards={props.cards} />
+			</div>
+		</div>
+	);
 }
 
-const mapStateToProps =(state,props)=> {
-  return {
-      cards:state.card.cards,
-      locations:state.locations.locations
-  }
-}
-export default connect(mapStateToProps,null)(Header)
+const mapStateToProps = (state) => {
+	return {
+		cards: selectAllCards(state),
+		locations: selectLocations(state),
+	};
+};
+export default connect(mapStateToProps)(Header);

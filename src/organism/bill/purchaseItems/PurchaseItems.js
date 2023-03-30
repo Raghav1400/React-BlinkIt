@@ -1,30 +1,21 @@
-import React from 'react'
-import {CartItem} from '../../../molecules/bill';
-import {connect} from 'react-redux'
-import Styles from './PurchaseItem.module.css'
+import React from "react";
+import { connect } from "react-redux";
+import styles from "./purchaseItem.module.css";
+import { selectAllCards } from "../../../pages/redux/cardRedux/cardReducer";
+import { isInCart, renderCartElement } from "./helper";
 
-const PurchaseItems =(props)=>{
-    const cart=props.card;
-    return (
-        <div className={Styles["item-container"]}>
-            {
-                cart.filter(
-                    (element)=>{
-                        return element.count>0;
-                    }
-                ).map(
-                    (element)=>{
-                        return <CartItem key={element.id} item={element}/>
-                    }
-                )   
-            }
-        </div>
-    )
-}
+const PurchaseItems = (props) => {
+	const cards = props.cards;
+	return (
+		<div className={styles["item-container"]}>
+			{cards.filter(isInCart).map(renderCartElement)}
+		</div>
+	);
+};
 
-const mapStateToProps =(state,props)=> {
-    return {
-        card:state.card.cards
-    }
-}
-export default connect(mapStateToProps)(PurchaseItems)
+const mapStateToProps = (state) => {
+	return {
+		cards: selectAllCards(state),
+	};
+};
+export default connect(mapStateToProps)(PurchaseItems);

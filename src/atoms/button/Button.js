@@ -1,8 +1,8 @@
 import React from 'react'
-
+import styles from './Button.module.css'
 function button(props) {
     return (
-        <button className={props.className}>{props.content}</button>
+        <button className={styles[props.type]}>{props.label}</button>
     )
 }
 

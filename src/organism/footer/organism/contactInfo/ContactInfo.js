@@ -1,23 +1,18 @@
-import React from 'react'
-import {ExtraInfo,SocialInfo,DownloadInfo} from '../../../../molecules/footer'
-import { connect } from 'react-redux'
-import Styles from './ContactInfo.module.css'
+import React from "react";
+import { ExtraInfo } from "../../molecules/extraInfo";
+import { SocialInfo } from "./molecules/socilaInfo";
+import { DownloadInfo } from "./molecules/downloadInfo";
+import styles from "./contactInfo.module.css";
+import { COPYWRITE_INFO, DOWNLOAD_LINKS, SOCIAL_INFO } from "./constant";
 
-function ContactInfo(props) {
-  const COPYWRITE = "© Blink Commerce Private Limited (formerly known as Grofers India Private Limited), 2016-2023"
-  return (
-    <div className={Styles['contact-info']}>
-      <ExtraInfo className='extra-info-note' info={COPYWRITE}/>
-      <DownloadInfo downloadInfo={props.downloadInfo} />
-      <SocialInfo socialInfo={props.socialInfo}/>
-    </div>
-  )
+function ContactInfo() {
+	return (
+		<div className={styles["contact-info"]}>
+			<ExtraInfo className="extra-info-note" info={COPYWRITE_INFO} />
+			<DownloadInfo downloadInfo={DOWNLOAD_LINKS} />
+			<SocialInfo socialInfo={SOCIAL_INFO} />
+		</div>
+	);
 }
 
-const mapStateToProps =(state,props)=> {
-  return {
-      socialInfo:state.socialInfo.socialInfo,
-      downloadInfo:state.downloadInfo.downloadInfo
-  }
-}
-export default connect(mapStateToProps,null)(ContactInfo)
+export default ContactInfo;

@@ -1,25 +1,10 @@
-import React from 'react'
-import { connect } from 'react-redux'
-import {PerkChild} from '../../../../molecules/footer'
-import Styles from './Perks.module.css'
+import React from "react";
+import styles from "./perks.module.css";
+import { PERKS } from "./constant";
+import { renderPerk } from "./helper";
 
 function Perks(props) {
-  return (
-    <div className={Styles['perks']}>
-      {
-        props.perks.map(
-          function(element){
-              return <PerkChild key={element.id} info={element}/>
-          }
-        )
-      }
-    </div>
-  )
+	return <div className={styles["perks"]}>{PERKS.map(renderPerk)}</div>;
 }
 
-const mapStateToProps =(state,props)=> {
-  return {
-      perks:state.perks.perks
-  }
-}
-export default connect(mapStateToProps,null)(Perks)
+export default Perks;

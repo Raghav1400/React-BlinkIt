@@ -2,12 +2,15 @@ import React from 'react'
 import {connect} from 'react-redux'
 import {Card} from '../../../../../../molecules/main'
 import { checkSelectedCategoryAndSubcategory } from './helper';
-import Styles from './CardsContainer.module.css'
+import styles from './CardsContainer.module.css'
+import { selectAllCards } from '../../../../../../pages/redux/cardRedux/cardReducer';
+
+
 
 const  CardsContainer=(props)=>{
     var {category,subcategory}=props;
     return (
-      <div className={Styles["cards-container"]}>
+      <div className={styles["cards-container"]}>
         {
           props.cards
           .filter(
@@ -25,9 +28,9 @@ const  CardsContainer=(props)=>{
     )
 }
 
-const mapStateToProps =(state,props)=> {
+const mapStateToProps =(state)=> {
   return {
-    cards:state.card.cards
+    cards:selectAllCards(state)
   }
 }
 export default connect(mapStateToProps)(CardsContainer)
