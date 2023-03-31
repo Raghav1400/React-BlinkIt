@@ -1,27 +1,16 @@
-import React from 'react'
-import {CategoryChild} from '../../../../molecules/main'
-import {connect} from 'react-redux'
-import Styles from './MainCategory.module.css'
-//import { categories } from './constant'
-// map function should be in helper file
-const MainCategory =(props)=>{
-    return (
-      <div className={Styles['header']} onClick={(e)=>props.onCategoryChange(e.target)}>
-        {
-          props.categories.map(
-            function(element){
-                return <CategoryChild key={element} info={element}/>
-            }
-          )
-        }
-      </div>
-    )
-}
+import React from "react";
+import styles from "./mainCategory.module.css";
+import { renderCategory } from "./helper";
 
-// use selectors, remove second parameter
-const mapStateToProps =(state)=> {
-  return {
-    categories:state.maincategory.categories
-  }
-}
-export default connect(mapStateToProps)(MainCategory)
+const MainCategory = (props) => {
+	const { CATEGORIES } = props;
+	return (
+		<div
+			className={styles["header"]}
+			onClick={(e) => props.onCategoryChange(e.target)}>
+			{renderCategory(CATEGORIES)}
+		</div>
+	);
+};
+
+export default MainCategory;
