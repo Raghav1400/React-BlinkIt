@@ -9,8 +9,8 @@
          "weight":"1Kg",
          "newPrice":"15",
          "oldPrice":"17" ,
-         "category":"FRUITS & VEGETABLES",
-         "subcategory":"Fresh Fruits",
+         "category":"FRUITS_VEGETABLES",
+         "subcategory":"FRESH_VEGETABLES",
          "count":0
      },
      {   
@@ -23,8 +23,8 @@
          "weight":"1Kg",
          "newPrice":"15",
          "oldPrice":"17" ,
-         "category":"FRUITS & VEGETABLES",
-         "subcategory":"Fresh Vegetables",
+         "category":"FRUITS_VEGETABLES",
+         "subcategory":"FRUITS",
          "count":0
      },
      {   
@@ -37,8 +37,8 @@
          "weight":"1Kg",
          "newPrice":"15",
          "oldPrice":"17" ,
-         "category":"DRINKS & JUICES",
-         "subcategory":"Cold Drinks",
+         "category":"DRINKS_JUICES",
+         "subcategory":"COLD_DRINK",
          "count":0
     }
  

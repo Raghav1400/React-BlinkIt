@@ -1,3 +1,0 @@
-import { CATEGORIES,SUBCATEGORIES,ALL}  from './constant'
-
-export {CATEGORIES,SUBCATEGORIES,ALL}

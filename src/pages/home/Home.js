@@ -1,7 +1,7 @@
 import React from "react";
 import { Header } from "../../organism/header";
 import { Footer } from "../../organism/footer";
-import { Main } from "../../organism/main";
+import { Main } from "./organisms/main";
 import "./home.module.css";
 
 const Home = () => {

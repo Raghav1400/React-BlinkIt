@@ -1,8 +1,8 @@
-[   "Vegetable & Fruits",
-    "Dairy & Breakfast",
-    "Munchies",
-    "Cold Drinks & Juices",
-    "Instant & Frozen Food",
-    "Tea, Coffee & Health Drinks",
-    "Bakery & Biscuits"
+[   "FRUITS_VEGETABLES",
+    "DAIRY_BREAKFAST",
+    "MUNCHIES",
+    "DRINKS_JUICES",
+    "INSTANT_FROZEN",
+    "TEA_COFFEE",
+    "BAKERY"
 ]
