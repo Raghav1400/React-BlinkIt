@@ -5,8 +5,8 @@ import { CartButton } from "./molucules/cartButton";
 import { Location } from "./molucules/location";
 import { Logo } from "./molucules/logo";
 import styles from "./header.module.css";
-import { selectAllCards } from "../../pages/redux/cardRedux/cardReducer";
-import { selectLocations } from "../../pages/redux/locationinfo";
+import { selectAllCards } from "../../redux/cardRedux/cardReducer";
+import { selectLocations } from "../../redux/locationRedux/locationinfo";
 import { BRAND_LOGO } from "./constant";
 
 function Header(props) {

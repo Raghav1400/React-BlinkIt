@@ -4,7 +4,7 @@ import Home from "./home/Home";
 import Checkout from "./checkout/Checkout";
 import Error from "./error/Error";
 import { Provider } from "react-redux";
-import store from "../pages/redux";
+import store from "../redux/store";
 
 const App = () => {
 	return (

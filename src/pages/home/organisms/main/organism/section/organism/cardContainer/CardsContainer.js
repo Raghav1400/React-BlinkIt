@@ -2,7 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import { checkSelectedCategoryAndSubcategory, renderCard } from "./helper";
 import styles from "./cardsContainer.module.css";
-import { selectAllCards } from "../../../../../../../redux/cardRedux/cardReducer";
+import { selectAllCards } from "../../../../../../../../redux/cardRedux/cardReducer";
 import PropTypes from "prop-types";
 const CardsContainer = (props) => {
 	var { category, subcategory } = props;

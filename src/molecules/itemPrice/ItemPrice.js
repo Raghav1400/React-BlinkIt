@@ -1,5 +1,5 @@
 import React from "react";
-import { increaseCount, decreaseCount } from "../../pages/redux/cardRedux";
+import { increaseCount, decreaseCount } from "../../redux/cardRedux";
 import { connect } from "react-redux";
 import { ItemPriceWithCount } from "./molecule";
 import styles from "./itemPrice.module.css";

@@ -1,4 +1,4 @@
-import cards from '../../../data/cards.json'
+import cards from '../../data/cards.json'
 import {INCREASE_COUNT,DECREASE_COUNT } from "./cardActionType";
 
 // async function loadCards() {

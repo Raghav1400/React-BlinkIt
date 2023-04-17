@@ -2,7 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import { calculateBill } from "./helper";
 import styles from "./billFooter.module.css";
-import { selectAllCards } from "../../../redux/cardRedux/cardReducer";
+import { selectAllCards } from "../../../../redux/cardRedux/cardReducer";
 
 const BillFooter = (props) => {
 	const { grandTotal, originaltotal, discount, items } = calculateBill(
